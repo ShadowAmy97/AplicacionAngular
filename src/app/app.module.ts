@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BarrademenuComponent } from './barrademenu/barrademenu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BarrademenuComponent
   ],
   imports: [
     BrowserModule,

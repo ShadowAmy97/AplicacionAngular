@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AplicacionAngular';
+
+  opciones = [
+    "API", "B", "C", "D", "E"
+  ];
 }

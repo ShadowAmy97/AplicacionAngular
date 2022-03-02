@@ -1,0 +1,16 @@
+<div *ngIf="peliculas!=null; else espera" class="d-flex">
+    <!-- <div class="card-group" > -->
+      <!-- <tr *ngFor="let pelicula of peliculas"> -->
+        <div class="card m-3" style="width:400px ">
+          <img class="card-img-left" src="{{peliculas.image}}" alt="Card image">
+          <!-- <div class="card-body">
+            <h4 class="card-title">{{peliculas.title}}</h4>
+            <p class="card-text">{{peliculas.director}}</p>
+            <p class="card-text">{{peliculas.release_date}}</p>
+          </div> -->
+        </div>
+        <h2 class="p-5">{{peliculas.title}}</h2>
+      <!-- </tr> -->
+    <!-- </div> -->
+  </div>
+    <ng-template #espera>Esperando datos...</ng-template>

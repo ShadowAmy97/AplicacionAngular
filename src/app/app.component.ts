@@ -9,6 +9,6 @@ export class AppComponent {
   title = 'AplicacionAngular';
 
   opciones = [
-    "API", "B", "C", "D", "E"
+    "Api", "Pipes"
   ];
 }

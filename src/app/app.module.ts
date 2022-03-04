@@ -7,13 +7,19 @@ import { BarrademenuComponent } from './barrademenu/barrademenu.component';
 import { ApiComponent } from './api/api.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PipesComponent } from './pipes/pipes.component';
+import { JuegoComponent } from './juego/juego.component';
+import { TragaperrasComponent } from './tragaperras/tragaperras.component';
+import { IconoComponent } from './tragaperras/icono/icono.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarrademenuComponent,
     ApiComponent,
-    PipesComponent
+    PipesComponent,
+    JuegoComponent,
+    TragaperrasComponent,
+    IconoComponent
   ],
   imports: [
     BrowserModule,

@@ -8,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
   peliculas: any;
+  nombre: any;
+  recaudacion:any;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get("https://ghibliapi.herokuapp.com/films/578ae244-7750-4d9f-867b-f3cd3d6fecf4")
+    this.http.get("https://ghibliapi.herokuapp.com/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6")
       .subscribe(
         resultado => {
           this.peliculas = resultado;
+          this.nombre=this.peliculas.title;
+          this.recaudacion = 159000000;
         }
       );
   }
+  fechaActual = new Date();
 }

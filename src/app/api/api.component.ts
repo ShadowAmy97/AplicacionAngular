@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApiComponent implements OnInit {
   peliculas: any;
-
+  
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -16,7 +16,9 @@ export class ApiComponent implements OnInit {
       .subscribe(
         resultado => {
           this.peliculas = resultado;
+          
         }
       );
   }
+ 
 }

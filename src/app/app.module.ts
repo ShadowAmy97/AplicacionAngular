@@ -10,6 +10,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { JuegoComponent } from './juego/juego.component';
 import { TragaperrasComponent } from './tragaperras/tragaperras.component';
 import { IconoComponent } from './tragaperras/icono/icono.component';
+import { ConversorPipe } from './conversor.pipe';
+import { FormularioComponent } from './formulario/formulario.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +22,15 @@ import { IconoComponent } from './tragaperras/icono/icono.component';
     PipesComponent,
     JuegoComponent,
     TragaperrasComponent,
-    IconoComponent
+    IconoComponent,
+    ConversorPipe,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

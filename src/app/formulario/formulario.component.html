@@ -1,0 +1,40 @@
+<div class="contenido">
+  <form [formGroup]="formularioContacto" (ngSubmit)="submit()">
+      <h1>Formulario de contacto</h1>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer01">Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre" id="validationServer01" placeholder="Nombre" required>
+        <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
+            (El nombre no puede quedar vacío)
+          </span>
+          <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['minlength']">
+            (Debe tener como mínimo 10 caracteres)
+          </span>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">Mail</label>
+        <input type="mail" class="form-control" formControlName="mail" id="validationServer02" placeholder="Mail" required>
+        <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
+            (El mail no puede quedar vacío)
+          </span>
+          <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
+            (El mail no es válido)
+          </span>
+      </div> 
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label>Ciudad</label>
+        <select class="custom-select" class="form-control" formControlName="ciudad" placeholder="Ciudad" required>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Malaga">Malaga</option>
+            <option value="Huelva">Huelva</option>
+          </select>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="alta()">Guardar</button>
+  </form><br>
+  <div>{{resultado}}</div>
+  <div>{{datos}}</div>
+</div>
